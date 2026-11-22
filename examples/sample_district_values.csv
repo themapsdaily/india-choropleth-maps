@@ -1,0 +1,15 @@
+# MADE-UP NUMBERS for trying the code out. They are random and do not describe any real survey or statistic.
+# Only a dozen rows. Districts that are not listed are drawn grey. Names must match your boundary file.
+DISTRICT,STATE,value
+Pune,Maharashtra,84.0
+Nagpur,Maharashtra,70.8
+Jaipur,Rajasthan,31.5
+Jodhpur,Rajasthan,23.0
+Patna,Bihar,28.9
+Gaya,Bihar,7.0
+Lucknow,Uttar Pradesh,76.6
+Kanpur Nagar,Uttar Pradesh,40.0
+Chennai,Tamil Nadu,84.7
+Madurai,Tamil Nadu,38.7
+Ernakulam,Kerala,95.8
+Khordha,Odisha,84.7

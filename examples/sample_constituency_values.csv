@@ -1,0 +1,13 @@
+# MADE-UP NUMBERS for trying the code out. They are random and do not describe any real survey or statistic.
+# Only ten rows. Constituencies that are not listed are drawn grey. Names must match your boundary file.
+CONSTITUENCY,STATE,value
+Pune,Maharashtra,0.1
+Nagpur,Maharashtra,21.0
+Jaipur,Rajasthan,91.0
+Patna Sahib,Bihar,47.0
+Lucknow,Uttar Pradesh,98.0
+Varanasi,Uttar Pradesh,39.7
+Chennai South,Tamil Nadu,7.3
+Ernakulam,Kerala,62.9
+Bhubaneswar,Odisha,77.9
+Guwahati,Assam,27.0

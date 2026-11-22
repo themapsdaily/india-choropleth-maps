@@ -1,0 +1,11 @@
+# MADE-UP NUMBERS for trying the code out. They are random and do not describe any real survey or statistic.
+# A few example rows. Use the names in the first-level division column of your own boundary file; the others stay grey.
+STATE,value
+Karnataka,8.7
+Bagmati,33.3
+Western Province,96.4
+Punjab(PK),75.8
+Dhaka,11.8
+Sindh,24.6
+Koshi,10.1
+Central Province,6.0

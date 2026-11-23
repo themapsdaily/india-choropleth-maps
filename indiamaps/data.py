@@ -160,7 +160,7 @@ def merge_ladakh(boundaries, name_col="st_nm"):
     if not is_ladakh.any():
         return boundaries.copy()
     parts = boundaries[is_jk | is_ladakh]
-    union = parts.geometry.union_all() if hasattr(parts.geometry, "union_all") else parts.geometry.unary_union
+    union = parts.geometry.union_all()
     out = boundaries[~is_ladakh].copy()
     jk_index = out.index[out[name_col].map(state_key) == "jammu and kashmir"]
     if len(jk_index) == 0:
@@ -220,6 +220,8 @@ def join_values(
         base = base[~base[name_col].map(state_key).isin(drop)]
     base = base[[name_col, "geometry"]].copy()
     base["_key"] = base[name_col].map(state_key)
+    # The merged J&K + Ladakh shape takes Jammu and Kashmir's number.
+    base.loc[base[name_col] == MERGED_LADAKH_NAME, "_key"] = state_key("Jammu and Kashmir")
 
     wanted = list(extra_cols) + ([label_col] if label_col else [])
     wanted += [c for c in ("x", "y") if c in table.columns and c not in wanted]

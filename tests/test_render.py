@@ -20,7 +20,8 @@ def test_map_renders_to_png(squares, table, tmp_path):
     out = tmp_path / "map.png"
     im.save_figure(fig, out, dpi=60, transparent=True)
     plt.close(fig)
-    assert Image.open(out).size == (360, 360)
+    with Image.open(out) as img:
+        assert img.size == (360, 360)
 
 
 def test_no_data_region_is_grey(squares, table):
@@ -52,7 +53,7 @@ def test_chart_and_colorbar_render(squares, table, tmp_path):
         plt.close(fig)
     fig, ax = im.ranked_bar_chart(merged, "dodger_blue", figsize=(5, 5))
     labels = [t.get_text() for t in ax.get_yticklabels()]
-    assert labels[0] == "Kerala" and "Goa" not in labels  # ranked, missing data left out
+    assert labels[0] == "Keralam" and "Goa" not in labels  # ranked (Kerala shown via SHORT_NAMES), missing data left out
     plt.close(fig)
     assert (tmp_path / "bar.png").stat().st_size > 0
 

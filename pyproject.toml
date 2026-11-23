@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,21 +7,22 @@ name = "indiamaps"
 version = "0.1.0"
 description = "Turn a table of regions and values into choropleth maps, colour bars, ranked bar charts and social cards."
 readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
 authors = [{ name = "TheMapsDaily", email = "themapsdaily@gmail.com" }]
 dependencies = [
-  "geopandas>=0.14",
-  "matplotlib>=3.7",
-  "pandas>=1.5",
-  "numpy>=1.23",
-  "palettable>=3.3",
-  "pillow>=9.5",
+  "geopandas>=1.2",
+  "matplotlib>=3.11",
+  "pandas>=3.1",
+  "numpy>=2.5",
+  "palettable>=3.3.3",
+  "pillow>=13.0",
 ]
 
 [project.optional-dependencies]
-app = ["streamlit>=1.30"]
-dev = ["pytest", "nbformat", "nbconvert", "ipykernel"]
+app = ["streamlit>=1.67"]
+dev = ["pytest>=9.2", "nbformat>=5.11", "nbconvert>=7.17", "ipykernel>=7.4"]
 
 [project.urls]
 Homepage = "https://themapsdaily.com"
